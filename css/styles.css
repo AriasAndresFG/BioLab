@@ -1,0 +1,384 @@
+/* Estilos básicos */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.logo {
+    max-width: 260px; /* Ajusta el tamaño máximo */
+    margin: 5px 0; /* Margen superior e inferior */
+}
+
+label {
+    font-weight: bold; /* Hace el texto en negrita */
+}
+
+.hidden {
+    display: none;
+}
+
+header {
+    position: relative;
+    background-color: #1f855e;
+    padding: 20px;
+    text-align: center;
+}
+
+header img {
+    max-width: 260px;
+    animation: bounce 1s infinite alternate;
+}
+
+#prev, #next {
+    background-color: #1f855e;
+    color: white;
+    border: none;
+    padding: 6px 10px; /* Aumentado para mejor diseño */
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+    margin: 10px 5px;
+}
+
+#prev:hover, #next:hover {
+    background-color: #165e42; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el mouse */
+}
+
+.slider-controls {
+    text-align: center;
+    margin-top: 10px;
+}
+
+#login {
+    width: 300px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background: white;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: absolute; /* Permite posicionar el contenedor */
+    top: 50%; /* Mueve el contenedor hacia abajo */
+    left: 50%; /* Mueve el contenedor hacia la derecha */
+    transform: translate(-50%, -50%); /* Centra el contenedor */
+}
+
+#login h1 {
+    margin-bottom: 20px;
+}
+
+#login label {
+    display: block;
+    margin: 10px 0 5px;
+}
+
+#login input {
+    width: 92%;
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    transition: border-color 0.3s;
+    text-align: center; /* Centra el texto dentro de los inputs */
+}
+
+#login input:focus {
+    border-color: #1f855e;
+}
+
+#login button {
+    background-color: #1f855e;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    font-weight: bold;
+}
+
+#login button:hover {
+    background-color: #165e42; /* Color más oscuro al pasar el mouse */
+}
+
+#logout {
+    position: absolute;
+    top: 20px; /* Ajusta la distancia desde el borde superior */
+    right: 20px; /* Ajusta la distancia desde el borde derecho */
+    background-color: #165e42; /* Color de fondo */
+    color: white;
+    font-weight: bold; /* Hace el texto en negrita */
+    border: none;
+    padding: 10px 15px; /* Espaciado interior */
+    border-radius: 5px; /* Bordes redondeados */
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease; /* Animación */
+}
+
+#logout:hover {
+    background-color: #0f3f2d; /* Color más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Aumentar ligeramente el tamaño al pasar el mouse */
+}
+
+nav {
+    text-align: center; /* Centrar los enlaces en el nav */
+    margin: 20px 0; /* Espacio vertical */
+}
+
+nav ul {
+    list-style-type: none; /* Eliminar puntos de la lista */
+    padding: 0; /* Eliminar padding */
+}
+
+nav ul li {
+    display: inline-block; /* Alineación horizontal */
+    margin: 0 15px; /* Espacio entre los elementos */
+}
+
+nav ul li a {
+    text-decoration: none; /* Sin subrayado */
+    color: white; /* Color del texto */
+    transition: color 0.3s;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+nav ul li a:hover {
+    color: #082218;
+}
+
+section {
+    padding: 20px;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.table-container {
+    overflow-x: auto; /* Permitir desplazamiento horizontal en pantallas pequeñas */
+    margin-top: 20px; /* Espacio superior */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse; /* Elimina el espacio entre celdas */
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd; /* Línea entre filas */
+}
+
+th {
+    background-color: #1f855e; /* Color de fondo para el encabezado */
+    color: white; /* Color del texto en el encabezado */
+}
+
+/* Estilos del carrusel */
+.slider {
+    display: flex; /* Usar flexbox para alinear las imágenes */
+    overflow: hidden; /* Ocultar las imágenes que están fuera del contenedor */
+    max-width: 400px; /* Ajusta el tamaño máximo del contenedor del carrusel */
+    margin: 0 auto; /* Centrar el contenedor */
+}
+
+.slider-image {
+    max-width: 100%; /* Asegura que las imágenes no se salgan del contenedor */
+    height: auto; /* Mantener la proporción de aspecto */
+    transition: opacity 0.5s ease; /* Transición suave para el cambio de imágenes */
+}
+
+/* Estilos para la tarjeta de la persona */
+.persona-card {
+    display: flex; /* Utiliza Flexbox para la disposición */
+    flex-direction: column; /* Alinea los elementos en columna */
+    align-items: center; /* Centra los elementos horizontalmente */
+    padding: 20px;
+    background-color: #ffffff; /* Fondo blanco para destacar la tarjeta */
+    border: 1px solid #ddd; /* Borde sutil */
+    border-radius: 10px; /* Bordes redondeados */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra para profundidad */
+    max-width: 400px; /* Ancho máximo de la tarjeta */
+    margin: 20px auto; /* Centra la tarjeta horizontalmente dentro del contenedor y agrega margen vertical */
+}
+
+.persona-img {
+    width: 150px; /* Ancho fijo para la imagen */
+    height: 150px; /* Alto fijo para la imagen */
+    object-fit: cover; /* Asegura que la imagen cubra el contenedor sin distorsión */
+    border-radius: 50%; /* Hace la imagen circular */
+    margin-bottom: 20px; /* Espacio debajo de la imagen */
+}
+
+.persona-info {
+    text-align: center; /* Centra el texto dentro de la información */
+}
+
+.persona-info h3 {
+    margin-bottom: 10px; /* Espacio debajo del título */
+}
+
+.persona-info p {
+    margin: 5px 0; /* Espacio entre los párrafos */
+    font-size: 16px; /* Tamaño de fuente legible */
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+footer {
+    background-color: #165e42;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+footer img {
+    max-width: 40px; /* Tamaño de las imágenes de redes sociales */
+    margin: 0 10px; /* Espacio entre imágenes */
+}
+
+footer .cuadro {
+    background-color: #333; /* Color oscuro para el cuadro de dirección y redes */
+    color: white; /* Color del texto en el cuadro */
+    padding: 10px; /* Espacio interno */
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+footer .Dirección,
+footer .Nuestras_redes {
+    font-weight: bold; /* Hace el texto en negrita */
+}
+
+footer p {
+    margin: 5px 0; /* Espacio entre párrafos */
+}
+
+/* Estilos de móvil */
+@media (max-width: 600px) {
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Cambiar a columna en pantallas pequeñas */
+        align-items: center; /* Centrar los enlaces */
+    }
+
+    nav ul li {
+        margin: 5px 0; /* Espacio entre elementos en columnas */
+    }
+
+    #login {
+        width: 90%; /* Aumentar el ancho en pantallas pequeñas */
+        margin: 0 auto; /* Centrar */
+    }
+
+    footer img {
+        max-width: 25px; /* Tamaño de las imágenes de redes sociales en móviles */
+    }
+
+    footer .Dirección,
+    footer .Nuestras_redes {
+        font-size: 14px; /* Ajustar el tamaño del texto en móviles */
+    }
+
+    .persona-card {
+        padding: 15px;
+        max-width: 90%; /* Ajusta el ancho en móviles */
+    }
+
+    .persona-img {
+        width: 120px; /* Reducir tamaño en móviles */
+        height: 120px;
+    }
+
+    .persona-info p {
+        font-size: 14px; /* Reducir tamaño de fuente en móviles */
+    }
+
+    #prev, #next {
+        padding: 8px 12px; /* Ajuste de padding en móviles */
+        margin: 10px 3px; /* Ajuste de margen en móviles */
+    }
+
+}
+
+
+
+
+/* Botones Crud */
+
+
+/* Botones Reactivos */
+
+.addReactivo{
+    background-color: #1f855e; /* Color de fondo principal */
+    color: white; /* Color del texto */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 5px; /* Espacio entre los botones */
+    font-size: 14px;
+}
+
+.addReactivo:hover {
+    background-color: #165e42; /* Color de fondo al pasar el mouse */
+    transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+}
+
+.addReactivo:active {
+    background-color: #0f3f2d; /* Color al hacer clic */
+    transform: scale(1); /* Vuelve al tamaño original */
+}
+
+
+
+/* Botones Implementos */
+
+#addImplemento{
+    background-color: #1f855e; /* Color de fondo principal */
+    color: white; /* Color del texto */
+    border: none;
+    padding: 8px 12px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 5px; /* Espacio entre los botones */
+    font-size: 14px;
+}
+
+#addImplemento:hover {
+    background-color: #165e42; /* Color de fondo al pasar el mouse */
+    transform: scale(1.05); /* Efecto de agrandamiento al pasar el mouse */
+}
+
+#addImplemento:active {
+    background-color: #0f3f2d; /* Color al hacer clic */
+    transform: scale(1); /* Vuelve al tamaño original */
+}
+
+
+
+/* Botones Proveedores */
+

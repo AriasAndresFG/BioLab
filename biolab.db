@@ -1,0 +1,9 @@
+CREATE TABLE reactivos (
+    id INTEGER PRIMARY KEY AUTOINCREMENT,
+    cantidad INTEGER,
+    nombre TEXT,
+    tipo TEXT,
+    uso TEXT,
+    fecha_caducidad TEXT,
+    unidad_masa TEXT
+);
